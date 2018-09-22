@@ -53,14 +53,14 @@ namespace LINQ_Practice
         [TestMethod]
         public void GetFirstCohortThatIsFullTimeAndPrimaryInstructorBirthdayInTheFuture()
         {
-            var ActualCohort = PracticeData/*.First*//*(cohort => (cohort.FullTime = true) && cohort.PrimaryInstructor.Birthday.CompareTo(). );*/  /*FILL IN LINQ EXPRESSION*/;
+            var ActualCohort = PracticeData.First(cohort => (cohort.FullTime = true) && cohort.PrimaryInstructor.Birthday.Month >= 10);  /*FILL IN LINQ EXPRESSION*/;
             Assert.AreEqual(ActualCohort, CohortBuilder.Cohort2);
         }
 
         [TestMethod]
         public void GetFirstCohortWithInstructorNamedZeldaOrNull()
         {
-            var ActualCohort = PracticeData/*FILL IN LINQ EXPRESSION*/;
+            var ActualCohort = PracticeData /*FILL IN LINQ EXPRESSION*/;
             Assert.IsNull(ActualCohort);
         }
 
