@@ -44,7 +44,7 @@ namespace LINQ_Practice
         [TestMethod]
         public void DoAllCohortsHavePrimaryInstructorsBornIn1980s()
         {
-            var doAll = PracticeData.All(cohort => cohort.PrimaryInstructor.Birthday.Year == 1980 && cohort.PrimaryInstructor.Birthday.Year < 1990);  /*FILL IN LINQ EXPRESSION*/;
+            var doAll = PracticeData.All(cohort => cohort.PrimaryInstructor.Birthday.Year >= 1980 && cohort.PrimaryInstructor.Birthday.Year < 1990);  /*FILL IN LINQ EXPRESSION*/;
             Assert.IsFalse(doAll); //<-- change true to doAll
         }
 

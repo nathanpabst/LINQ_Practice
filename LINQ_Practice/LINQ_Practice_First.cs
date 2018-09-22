@@ -38,7 +38,7 @@ namespace LINQ_Practice
         [TestMethod]
         public void GetFirstCohortWherePrimaryInstructorIsKate()
         {
-            var ActualCohort = PracticeData/*FILL IN LINQ EXPRESSION*/;
+            var ActualCohort = PracticeData.First(cohort => cohort.PrimaryInstructor.FirstName == "Kate");  /*FILL IN LINQ EXPRESSION*/;
             Assert.AreEqual(ActualCohort, CohortBuilder.Cohort4);
         }
 
