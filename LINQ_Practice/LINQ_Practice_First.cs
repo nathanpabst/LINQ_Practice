@@ -46,14 +46,14 @@ namespace LINQ_Practice
         [TestMethod]
         public void GetFirstCohortWithThreeJuniorInstructors()
         {
-            var ActualCohort = PracticeData/*FILL IN LINQ EXPRESSION*/;
+            var ActualCohort = PracticeData.First(cohort => cohort.JuniorInstructors.Count() == 3); /*FILL IN LINQ EXPRESSION*/;
             Assert.AreEqual(ActualCohort, CohortBuilder.Cohort3);
         }
 
         [TestMethod]
         public void GetFirstCohortThatIsFullTimeAndPrimaryInstructorBirthdayInTheFuture()
         {
-            var ActualCohort = PracticeData/*FILL IN LINQ EXPRESSION*/;
+            var ActualCohort = PracticeData/*.First*//*(cohort => (cohort.FullTime = true) && cohort.PrimaryInstructor.Birthday.CompareTo(). );*/  /*FILL IN LINQ EXPRESSION*/;
             Assert.AreEqual(ActualCohort, CohortBuilder.Cohort2);
         }
 
